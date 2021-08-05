@@ -75,3 +75,8 @@ gitbook init #为章节设置和创建文件
   * [gitbook安装](https://www.jianshu.com/p/0388d8bb49a7)
   * [gitbook安装报错1](https://www.cnblogs.com/cyxroot/p/13754475.html)
   * [gitbook安装报错1](https://blog.csdn.net/qq_36742720/article/details/89406212)
+
+## 6. 展示
+
+http://106.12.113.87:82/
+
