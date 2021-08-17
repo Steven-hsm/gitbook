@@ -1,0 +1,606 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Springboot集成RocketMq · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Mybook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../gitbook/">
+            
+                <a href="../gitbook/">
+            
+                    
+                    Gitbook
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../gitbook/MarkDown简单教程.html">
+            
+                <a href="../gitbook/MarkDown简单教程.html">
+            
+                    
+                    MarkDown简单教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../gitbook/gitbook本地安裝使用.html">
+            
+                <a href="../gitbook/gitbook本地安裝使用.html">
+            
+                    
+                    Gitbook本地安裝使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../gitbook/git切换tag并提交代码.html">
+            
+                <a href="../gitbook/git切换tag并提交代码.html">
+            
+                    
+                    Git切换Tag并提交代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../java/">
+            
+                <a href="../java/">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../java/基础信息/">
+            
+                <a href="../java/基础信息/">
+            
+                    
+                    基础信息
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../java/基础信息/数据类型.html">
+            
+                <a href="../java/基础信息/数据类型.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../netty/">
+            
+                <a href="../netty/">
+            
+                    
+                    Netty
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../netty/第一章 简单使用/">
+            
+                <a href="../netty/第一章 简单使用/">
+            
+                    
+                    第一章 简单使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../netty/第一章 简单使用/BIO简单实例.html">
+            
+                <a href="../netty/第一章 简单使用/BIO简单实例.html">
+            
+                    
+                    BIO简单实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../netty/第一章 简单使用/NIO简单实例.html">
+            
+                <a href="../netty/第一章 简单使用/NIO简单实例.html">
+            
+                    
+                    NIO简单实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../netty/第一章 简单使用/Netty简单实例.html">
+            
+                <a href="../netty/第一章 简单使用/Netty简单实例.html">
+            
+                    
+                    Netty简单实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../netty/第三章 线程模型解析/">
+            
+                <a href="../netty/第三章 线程模型解析/">
+            
+                    
+                    第三章 线程模型解析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../netty/第三章 线程模型解析/Netty线程模型.html">
+            
+                <a href="../netty/第三章 线程模型解析/Netty线程模型.html">
+            
+                    
+                    Netty线程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    第二章 NIO原理解析
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" >
+            
+                <span>
+            
+                    
+                    第五章 Netty其他组件
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" >
+            
+                <span>
+            
+                    
+                    第六章 Netty源码解析
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" >
+            
+                <span>
+            
+                    
+                    第四章 Netty核心组件
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    RocketMq
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1" data-path="springboot集成RocketMq.html">
+            
+                <a href="springboot集成RocketMq.html">
+            
+                    
+                    Springboot集成RocketMq
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Springboot集成RocketMq</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="springboot-&#x5FEB;&#x901F;&#x96C6;&#x6210;rocketmq">Springboot &#x5FEB;&#x901F;&#x96C6;&#x6210;RocketMq</h2>
+<h3 id="1-&#x589E;&#x52A0;pom&#x6587;&#x4EF6;">1. &#x589E;&#x52A0;pom&#x6587;&#x4EF6;</h3>
+<pre><code class="lang-xml">   <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.hongxi<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>rocketmq-spring-boot-starter<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<h3 id="2--&#x914D;&#x7F6E;">2.  &#x914D;&#x7F6E;</h3>
+<pre><code class="lang-yaml"><span class="hljs-attr">   rocketmq:</span>
+<span class="hljs-attr">     name-server:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.0</span><span class="hljs-number">.84</span>:<span class="hljs-number">9876</span>
+<span class="hljs-attr">     producer:</span>
+<span class="hljs-attr">       group:</span> test-group
+<span class="hljs-attr">     sendMsgTimeoutMillis:</span> <span class="hljs-number">3000</span>
+<span class="hljs-attr">     reconsumeTimes:</span> <span class="hljs-number">3</span>
+</code></pre>
+<h3 id="3-&#x767B;&#x5F55;rocketmq&#x7BA1;&#x7406;&#x540E;&#x53F0;&#x6DFB;&#x52A0;topic&#xFF08;operation-topic&#xFF09;">3. &#x767B;&#x5F55;rocketmq&#x7BA1;&#x7406;&#x540E;&#x53F0;&#x6DFB;&#x52A0;topic&#xFF08;operation-topic&#xFF09;</h3>
+<p>   <img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20210809152157111.png" alt="image-20210809152157111"></p>
+<h3 id="4-&#x751F;&#x4EA7;&#x8005;&#x4F7F;&#x7528;">4. &#x751F;&#x4EA7;&#x8005;&#x4F7F;&#x7528;</h3>
+<pre><code class="lang-java"><span class="hljs-meta">@Autowired</span>
+RocketMQTemplate rocketMQTemplate;
+
+<span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendHelloWorld</span><span class="hljs-params">()</span> </span>{
+    SendResult result = rocketMQTemplate.syncSend(<span class="hljs-string">&quot;operation-topic&quot;</span>, <span class="hljs-string">&quot;hello world&quot;</span>);
+    log.info(<span class="hljs-string">&quot;&#x53D1;&#x9001;&#x7ED3;&#x679C;&#xFF1A;{}&quot;</span>, JSON.toJSONString(result));
+}
+</code></pre>
+<h3 id="5-&#x6D88;&#x8D39;&#x8005;&#x4F7F;&#x7528;">5. &#x6D88;&#x8D39;&#x8005;&#x4F7F;&#x7528;</h3>
+<pre><code class="lang-java"><span class="hljs-meta">@Component</span>
+<span class="hljs-meta">@RocketMQMessageListener</span>(topic = <span class="hljs-string">&quot;operation-topic&quot;</span>, <span class="hljs-comment">//topic&#x4E3B;&#x9898;</span>
+        consumerGroup = <span class="hljs-string">&quot;consumer-group&quot;</span>,          <span class="hljs-comment">//&#x6D88;&#x8D39;&#x7EC4;</span>
+        messageModel = MessageModel.CLUSTERING,
+        consumeMode = ConsumeMode.ORDERLY)
+<span class="hljs-meta">@Slf</span>4j
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MqTestListener</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">RocketMQListener</span>&lt;<span class="hljs-title">String</span>&gt; </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onMessage</span><span class="hljs-params">(String message)</span> </span>{
+        log.info(<span class="hljs-string">&quot;&#x63A5;&#x53D7;&#x5230;&#x6D88;&#x606F;&#xFF1A;{}&quot;</span>, message);
+    }
+}
+</code></pre>
+<h3 id="6-&#x6CE8;&#x610F;&#x4E8B;&#x9879;">6. &#x6CE8;&#x610F;&#x4E8B;&#x9879;</h3>
+<p><strong>&#x5982;&#x4F55;&#x4F7F;&#x7528;tag</strong></p>
+<pre><code class="lang-java"><span class="hljs-comment">/**
+  * Same to {<span class="hljs-doctag">@link</span> #syncSend(String, Message)}.
+  *
+  * <span class="hljs-doctag">@param</span> destination formats: `topicName:tags`
+  * <span class="hljs-doctag">@param</span> payload     the Object to use as payload
+  * <span class="hljs-doctag">@return</span> {<span class="hljs-doctag">@link</span> SendResult}
+  */</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> SendResult <span class="hljs-title">syncSend</span><span class="hljs-params">(String destination, Object payload)</span> </span>{
+    <span class="hljs-keyword">return</span> syncSend(destination, payload, producer.getSendMsgTimeout());
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x770B;&#x5230; destination  = topicName:tags</p>
+<p><strong>&#x6D88;&#x8D39;&#x6A21;&#x5F0F;</strong></p>
+<ul>
+<li>&#x5E7F;&#x64AD;&#x6A21;&#x5F0F; MessageModel.BROADCASTING &#x6240;&#x6709;&#x6D88;&#x8D39;&#x8005;&#x90FD;&#x4F1A;&#x6536;&#x5230;&#x6D88;&#x606F;</li>
+<li>&#x96C6;&#x7FA4;&#x6A21;&#x5F0F; MessageModel.CLUSTERING &#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x6D88;&#x8D39;&#x8005;&#x4F1A;&#x6D88;&#x8D39;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x8D1F;&#x8F7D;&#x5747;&#x8861;</li>
+</ul>
+<p>&#x6D88;&#x8D39;&#x8005;&#x5982;&#x679C;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x4E3A;&#x5E7F;&#x64AD;&#x6A21;&#x5F0F;&#xFF0C;&#x6D88;&#x8D39;&#x6A21;&#x5F0F;&#x90FD;&#x4F1A;&#x5E7F;&#x64AD;&#x6A21;&#x5F0F;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Springboot集成RocketMq","level":"1.6.1","depth":2,"previous":{"title":"RocketMq","level":"1.6","depth":1,"ref":"","articles":[{"title":"Springboot集成RocketMq","level":"1.6.1","depth":2,"path":"mybook/rocketMq/springboot集成RocketMq.md","ref":"mybook/rocketMq/springboot集成RocketMq.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["summary","expandable-chapters","livereload"],"pluginsConfig":{"livereload":{},"summary":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mybook/rocketMq/springboot集成RocketMq.md","mtime":"2021-08-09T08:21:46.830Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-17T10:21:19.655Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
